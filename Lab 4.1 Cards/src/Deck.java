@@ -2,8 +2,8 @@ import java.util.ArrayList;
 
 public class Deck 
 {
-	private ArrayList<Card> unDealt = new ArrayList<Card>();
-	private ArrayList<Card> Dealt = new ArrayList<Card>();
+	private ArrayList<Card> unDealt; //= new ArrayList<Card>();
+	private ArrayList<Card> Dealt; //= new ArrayList<Card>();
 	
 	public Deck (String[] rank, String[] suit, int[] value)
 	{
@@ -31,9 +31,11 @@ public class Deck
 		return unDealt.size();
 	}
 	
-	public void deal()
+	public String deal()
 	{
 		Card c = unDealt.remove(0);
+		Dealt.add(c);
+		return c.toString();
 	}
 	
 	public void shuffle()
