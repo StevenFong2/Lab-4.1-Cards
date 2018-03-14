@@ -29,6 +29,17 @@ public class Card
 	
 	public boolean equals(Card othercard)
 	{
+		if (this.value == othercard.getValue())
+		{
+			return true;
+		}
 		
+		return false;
+	}
+	
+	public String toString()
+	{
+		String r = this.rank + "of" + this.suit;
+		return r;
 	}
 }
