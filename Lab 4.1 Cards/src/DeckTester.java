@@ -9,9 +9,12 @@ public class DeckTester
 		
 		Deck deck = new Deck(rank, suit, value);
 		
-		/*for (int i = 0; i < deck.size(); i++)
+		int size = deck.size();
+		deck.shuffle();
+		
+		for (int i = 0; i < size; i++)
 		{
-			System.out.println(deck.toS);
-		}*/
+			System.out.println(deck.deal());
+		}
 	}
 }

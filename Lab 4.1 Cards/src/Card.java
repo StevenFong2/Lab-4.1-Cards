@@ -39,7 +39,7 @@ public class Card
 	
 	public String toString()
 	{
-		String r = this.rank + "of" + this.suit;
+		String r = this.rank + " of " + this.suit;
 		return r;
 	}
 }
