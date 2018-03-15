@@ -1,3 +1,6 @@
+//StevenFong
+//Period 2
+
 import java.util.ArrayList;
 
 public class Deck 
