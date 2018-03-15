@@ -45,7 +45,7 @@ public class Deck
 		
 		for (int k = 51; k >= 1; k--)
 		{
-			int r = (int)(Math.random()*50) + 1;
+			int r = (int)(Math.random()*51);
 			
 			this.unDealt.add(r, this.unDealt.get(k));
 			this.unDealt.add(k + 1, this.unDealt.get(r + 1));
@@ -55,7 +55,7 @@ public class Deck
 		
 		for (int i = 0; i < n; i++)
 		{	
-			if (this.unDealt.get(i).getValue() > this.unDealt.get(posmax).getValue() && unDealt.get(i).getSuit().trim().toLowerCase().equals("spade"));
+			if (this.unDealt.get(i).getValue() > this.unDealt.get(posmax).getValue() && unDealt.get(i).getSuit().trim().toLowerCase().equals("spades"));
 			{
 				posmax = i;
 			}
