@@ -16,7 +16,7 @@ public class DeckTester
 		
 		for (int i = 0; i < size; i++)
 		{
-			System.out.println(deck.deal());
+			System.out.println(i+ " " + deck.deal());
 		}
 	}
 }
