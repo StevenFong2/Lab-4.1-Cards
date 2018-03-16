@@ -18,5 +18,7 @@ public class DeckTester
 		{
 			System.out.println(i+ " " + deck.deal());
 		}
+		
+		//System.out.println(deck.numberRepeats());
 	}
 }

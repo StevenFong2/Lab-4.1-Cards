@@ -82,4 +82,26 @@ public class Deck
 			this.unDealt.remove(k + 1);*/
 		}
 	}
+	
+	/*public String numberRepeats()
+	{
+		//int n = unDealt.size();
+		int n = Dealt.size();
+		int rep = 0;
+		
+		for (int i = 0; i < n - 1; i++)
+		{
+			if (Dealt.get(i).toString().equals(Dealt.get(i + 1).toString()))
+			{
+				rep++;
+			}
+		}
+		
+		if (rep > 0)
+		{
+			return "There are duplicate cards";
+		}
+		
+		return "There are no duplicate cards";
+	}*/
 }
