@@ -34,11 +34,11 @@ public class Deck
 		return this.unDealt.size();
 	}
 	
-	public String deal()
+	public Card deal()
 	{
 		Card c = this.unDealt.remove(0);
 		this.Dealt.add(c);
-		return c.toString();
+		return c;
 	}
 	
 	public void shuffle()
@@ -46,25 +46,22 @@ public class Deck
 		int posmax = 0;
 		int n = this.unDealt.size();
 		
-		for (int k = 51; k >= 1; k--)
+		for (int k = n - 1; k >= 0; k--)
 		{
-			int r = (int)(Math.random()*51);
+			int r = (int)(Math.random()*(n - 1));
 			
-			this.unDealt.add(r, this.unDealt.get(k));
+			Card c = unDealt.get(k);
+			
+			this.unDealt.set(k, unDealt.get(r));
+			this.unDealt.set(r, c);
+			
+			/*this.unDealt.add(r, this.unDealt.get(k));
 			this.unDealt.add(k + 1, this.unDealt.get(r + 1));
 			this.unDealt.remove(r + 1);
-			this.unDealt.remove(k + 1);
+			this.unDealt.remove(k + 1);*/
 		}
 		
-		/*for (int i = 0; i < n; i++)
-		{	
-			if (this.unDealt.get(i).getValue() > this.unDealt.get(posmax).getValue());
-			{
-				posmax = i;
-			}
-		}*/
-		
-		for (int k = 51; k >= 1; k--)
+		for (int k = n - 1; k >= 0; k--)
 		{
 			for (int i = 0; i < n; i++)
 			{	
@@ -73,10 +70,16 @@ public class Deck
 					posmax = i;
 				}
 			}
-			this.unDealt.add(posmax, this.unDealt.get(k));
+			
+			Card c = unDealt.get(k);
+			
+			this.unDealt.set(k, unDealt.get(posmax));
+			this.unDealt.set(posmax, c);
+			
+			/*this.unDealt.add(posmax, this.unDealt.get(k));
 			this.unDealt.add(k + 1, this.unDealt.get(posmax + 1));
 			this.unDealt.remove(posmax + 1);
-			this.unDealt.remove(k + 1);
+			this.unDealt.remove(k + 1);*/
 		}
 	}
 }
